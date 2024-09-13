@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+body{
+    background-color: rgb(89, 0, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    border-radius: 1.2rem;
+    width: 25vw;
+    background-color: white;
+    box-shadow: 0 0 30px black;
+    padding: 1rem 0rem 3rem 1rem;
+}
+
+.heading{
+    color: black;
+    margin-top: 1rem;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.input-div{
+    margin-left: 2rem;
+    height: 7vh;
+}
+
+.task{
+    height: 100%;
+    width: 70%;
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(226, 226, 226);
+    padding-left: 1rem;
+    outline: none;
+}
+
+.add-task{
+    height: 100%;
+    width: 20%;
+    border-radius: 1rem;
+    border: none;
+    background-color: red;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+}
