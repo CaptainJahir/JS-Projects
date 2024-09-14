@@ -15,15 +15,15 @@ body{
 
 .container{
     border-radius: 1.2rem;
-    width: 25vw;
+    width: 35vw;
     background-color: white;
     box-shadow: 0 0 30px black;
     padding: 1rem 0rem 3rem 1rem;
 }
 
 .heading{
-    color: black;
     margin-top: 1rem;
+    margin-bottom: 1rem;
     margin-left: 1.5rem;
     font-size: 1.5rem;
     font-weight: 600;
@@ -31,26 +31,122 @@ body{
 
 .input-div{
     margin-left: 2rem;
-    height: 7vh;
+    height: 4rem;
 }
 
-.task{
+.inp-task{
     height: 100%;
     width: 70%;
-    border-radius: 1rem;
-    border: none;
     background-color: rgb(226, 226, 226);
-    padding-left: 1rem;
+    border-radius: 8px;
+    border: none;
     outline: none;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .add-task{
     height: 100%;
     width: 20%;
-    border-radius: 1rem;
+    border-radius: 7px;
     border: none;
     background-color: red;
     color: white;
     font-size: 1rem;
     font-weight: 600;
+    cursor: pointer;
+}
+
+.task-head{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: orange;
+    margin-bottom: 1rem;
+}
+
+.task-container{
+    margin-top: 3rem;
+    margin-right: 2.5rem;
+    margin-left: 1.9rem;
+    /* border: 2px solid black; */
+}
+
+.added-task{
+    display: flex;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    border-radius: 5px;
+    background-color: rgb(236, 236, 236);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.task{
+    width: 80%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-weight: 500;
+    padding-left: 2%;
+}
+
+.task-action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20%;
+}
+
+.done-task{
+    border: none;
+    height: 100%;
+    outline: none;
+}
+
+.done-task img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.del-task{
+    height: 100%;
+    border: none;
+    outline: none;
+}
+
+.del-task img{
+    height: 100%;
+    cursor: pointer;
+}
+
+.completed{
+    margin-top: 3rem;
+    margin-right: 2.5rem;
+    margin-left: 1.9rem;
+}
+
+.comp-head{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: rgb(15, 201, 15);
+    margin-bottom: 1rem;
+}
+
+.comp-task{
+    padding: .5rem .6rem .5rem .5rem;
+    background-color: rgb(236, 236, 236);
+    width: 100%;
+    border-radius: 5px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-weight: 500;
+}
+
+.completed-task{
+    display: flex;
+    flex-direction: column;
 }
