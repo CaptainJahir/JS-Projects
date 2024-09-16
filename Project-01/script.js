@@ -1,30 +1,29 @@
-let taskArr = [];   // Here Goes The Task Array
+let taskArr = JSON.parse(localStorage.getItem('taskArr')) || [];   // Here Goes The Task Array
 
-    /* Generating Html Through JS */
+
+/* Generating Html Through JS */
 
 let html = '';
 
+
 function updateTask() {
     html =``; // This Removes the previous Tasks which already Exists (fixing duplicates)
-
+    localStorage.clear(); // clearing local storage so that , array won't repeat
+    
     taskArr.forEach((taskItem)=>{
-
-        html += `
         
-        <div class="added-task">
-                    <p class="task">${taskItem.task}</p>
-                    <div class="task-action">
-                        <button class="done-task"><img src="Assests/correct.png" alt="task-done"></button>
-                        <button class="del-task" onclick="delTask()"><img src="Assests/x-mark.png" alt="del-task"></button>
-                    </div>
-                </div>
-        `;
+        html += `   <div class="added-task">
+        <p class="task">${taskItem.task}</p>
+        <button class="done-task" onclick ="compTask()"><img src="Assests/correct.png" alt="task-done"></button>
+        </div>  `;
         
         let taskDiv = document.body.querySelector('.all-tasks');
         taskDiv.innerHTML = html;
     });
-
+    
     inpTag.value = '';
+
+    localStorage.setItem('taskArr' ,JSON.stringify(taskArr)); //storing in local storage
 }
 
 // Adding Add button Functionality
@@ -53,12 +52,14 @@ inpTag.addEventListener('keydown', (event) => {
     }
 }); // This Will Trigger on Enter Button in Input Tag 
 
-function delTask() {
+function compTask(index) {
     /* Removing From DOM */
     let taskDiv = document.body.querySelector(".all-tasks");  // Targeting the task div container
     let task = document.body.querySelector(".added-task");  // Targeting Actual Task
     taskDiv.removeChild(task);
-
-    /* Removing From JS Array */
-    taskArr.pop(task);
+    taskArr.splice(index ,1);   // Removing From JS Array
+    localStorage.setItem('taskArr', JSON.stringify(taskArr)); // updates local Storage and removes that particular element
+    updateTask(); // Generate HTML Again 
 }
+
+updateTask();
