@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: rgb(89, 0, 255);
+    background-color: #e3f2fd;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@ body{
 
 .container{
     border-radius: 1.2rem;
-    width: 35vw;
+    width: 55vw;
     background-color: white;
     box-shadow: 0 0 30px black;
     padding: 1rem 0rem 3rem 1rem;
